@@ -1,0 +1,16 @@
+"Source:","/Volumes/Samsung/Software/rust/keyboard/nightliner/nightliner.kicad_sch"
+"Date:","2023 October 22, Sunday 23:21:30"
+"Tool:","Eeschema 7.0.7"
+"Generator:","/Applications/KiCad/KiCad.app/Contents/SharedSupport/plugins/bom_csv_grouped_by_value.py"
+"Component Count:","46"
+
+"Collated Components:"
+
+"Item","Qty","Reference(s)","Value","LibPart","Footprint","Datasheet","DNP","LCSCNumber","PartNumber","Sim.Device","Sim.Pins"
+"1","20","D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11, D12, D13, D14, D15, D16, D17, D18, D19, D20","D_Small","Device:D_Small","","~","","","","D","1=K 2=A"
+"2","1","F1","500mA","Device:Polyfuse","","~","","","","",""
+"3","1","FB1","Ferritebead","Device:FerriteBead","","~","","C14709","BLM18PG121SN1D","",""
+"4","1","J1","USB_C_Receptacle_USB2.0","Connector:USB_C_Receptacle_USB2.0","Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12","https://www.usb.org/sites/default/files/documents/usb_type-c.zip","","","","",""
+"5","2","R1, R2","5.1k","Device:R","","~","","","","",""
+"6","20","SW1, SW2, SW3, SW4, SW5, SW6, SW7, SW8, SW9, SW10, SW11, SW12, SW13, SW14, SW15, SW16, SW17, SW18, SW19, SW20","SW_SPST","Switch:SW_SPST","","~","","","","",""
+"7","1","U1","holyiot-18010","kleeb_mcu:holyiot-18010","mcu:holyiot-18010","","","","","",""
