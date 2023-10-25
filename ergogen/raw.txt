@@ -1,0 +1,182 @@
+units:
+  # Parameters
+  usb_cutout_x:  51.64
+  usb_cutout_y: 2.10
+  usb_cutout_r: -15.5
+
+  # Constants
+  choc_cap_x: 17.5
+  choc_cap_y: 16.5
+  choc_plate_thickness: 1.2
+
+  # create new default units
+  mx: 18
+  my: 18.2
+  # half height versions
+  hx: mx / 2
+  hy: my / 2
+
+points:
+  key: # each key across all zones will have these properties
+    bind: 5
+    # this only affects the demo.dxf preview
+    width: choc_cap_x
+    height: choc_cap_y
+  zones:
+    matrix:
+      key:
+        spread: 1mx
+        padding: 1my
+      anchor:
+        rotate: 6 #-18
+      columns:
+        outer:
+          rows.top:
+            shift: [0, 0]
+          rows.home:
+            shift: [0, -0.0my]
+          rows.bottom.skip: true
+        pinky:
+          key.splay: -2
+          key.stagger: 0.5my
+          key.spread: 1mx + 0.65
+          rows.top:
+            shift: [-0, 0]
+          rows.home:
+            shift: [-0, 0]
+          rows.bottom:
+            shift: [0, 0]
+        ring:
+          key.splay: -2
+          key.stagger: 0.85my
+          key.spread: 1mx + 0.85
+        middle:
+          key.splay: -2
+          key.stagger: 0.60my
+          key.spread: 1mx + 0.85
+        index:
+          key.splay: -2
+          key.stagger: -0.5my
+          key.spread: 1mx + 0.65
+        inner:
+          key.splay: -2
+          key.stagger: -0.35my
+          key.spread: 1mx + 0.65
+      rows:
+        bottom:
+        home:
+        top:
+    fan:
+      anchor:
+        ref: matrix_index_bottom
+        shift: [0mx, -1.6my]
+        rotate: 8
+      columns:
+        near:
+          key.origin: [-mx/2, -my/2]
+          key.rotate: 0
+        home:
+          key.splay: -25
+          key.spread: 1.1mx
+          key.origin: [-mx/2, -my/2]
+          key.shift: [0, 0my]
+        far:
+          key.splay: -25
+          key.rotate: -0
+          key.spread: 1.1mx
+          key.origin: [-mx/2, -my/2]
+          key.shift: [-0mx, 0my]
+      rows:
+        thumb:
+
+outlines:
+  _keycaps:
+    - what: rectangle
+      where: true
+      bound: false
+      size: [choc_cap_x, choc_cap_y]
+  _keys:
+    - what: rectangle
+      where: true
+      bound: false
+      size: 13.8
+  _keys_recessed:
+    - what: rectangle
+      where: true
+      bound: false
+      size: 15
+  _board_loose:
+    - what: polygon
+      operation: stack
+      points:
+        - ref: matrix_outer_top
+          shift: [-hx-4,hy]
+        - ref: matrix_inner_top
+          shift: [-hx,hy+4]
+        - ref: matrix_inner_top
+          shift: [2.48mx,hy+4]
+        - ref: matrix_inner_top
+          shift: [2.48mx,-3.8my]
+        - ref: matrix_middle_bottom
+          shift: [hx,-4.665hy]
+        - ref: matrix_outer_home
+          shift: [-hx-4,-2.2hy]
+      expand: 0
+      joints: beveled
+  _board_looser:
+    - what: polygon
+      operation: stack
+      points:
+        - ref: matrix_outer_top
+          shift: [-hx,hy+20]
+        - ref: matrix_inner_top
+          shift: [hx,hy+42]
+        - ref: fan_far_thumb
+          shift: [hx,hy + 4]
+        - ref: fan_near_thumb
+          shift: [-hx,0]
+        - ref: matrix_outer_home
+          shift: [-hx,-hy-13]
+      expand: 4
+      joints: beveled
+  _board_tight:
+    - what: rectangle
+      where: true
+      bound: false
+      size: [mx+0,my+0]
+      expand: 4
+      joints: pointy
+  debug:
+    - name: _board_loose
+    - operation: stack
+      name: _keycaps
+  _board:
+    - name: _board_loose
+    - operation: add
+      name: _board_tight
+  pcb:
+    - what: outline
+      name: _board
+      fillet: 1
+  _outer:
+    - what: outline
+      name: pcb
+      expand: 3
+  _rim:
+    - name: _outer
+    - operation: subtract
+      name: pcb
+  stack:
+    - name: pcb
+    - operation: stack
+      name: _keycaps
+  keycaps:
+    - name: _keycaps
+  switchplate:
+    - name: pcb
+    - operation: subtract
+      name: _keys
+  switchplate_recess:
+    - name: pcb
+    - operation: subtract
+      name: _keys_recessed
