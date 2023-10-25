@@ -88,7 +88,7 @@ points:
           key.shift: [-0mx, 0my]
       rows:
         thumb:
-
+  rotate: 4
 outlines:
   _keycaps:
     - what: rectangle
@@ -105,7 +105,41 @@ outlines:
       where: true
       bound: false
       size: 15
-  _board_loose:
+  _plate_loose:
+    - what: polygon
+      operation: stack
+      points:
+        - ref: matrix_outer_top
+          shift: [-hx-2,hy]
+        - ref: matrix_middle_home
+          shift: [0,-hy]
+        - ref: matrix_inner_top
+          shift: [-hx,hy+2]
+        - ref: matrix_inner_top
+          shift: [hx+2,hy+2]
+        - ref: matrix_inner_top
+          shift: [hx+2,hy-59]
+        - ref: fan_home_thumb
+          shift: [hx+6,hy+2]
+        - ref: matrix_inner_top
+          shift: [41.64,-69.16]
+        - ref: fan_near_thumb
+          orient: 0
+          shift: [-hx-2.0,-hy+1.55]
+        - ref: matrix_ring_bottom
+          orient: 0
+          shift: [-hx+32.1,-hy-4]
+        - ref: matrix_ring_bottom
+          orient: 0
+          shift: [-hx+4,-hy-4]
+        - ref: matrix_ring_bottom
+          orient: 1.5
+          shift: [-hx+4,-hy-24]
+        - ref: matrix_outer_home
+          shift: [-hx-2,-19.62]
+      expand: 0
+      joints: beveled
+  _pcb_loose:
     - what: polygon
       operation: stack
       points:
@@ -114,49 +148,58 @@ outlines:
         - ref: matrix_inner_top
           shift: [-hx,hy+4]
         - ref: matrix_inner_top
-          shift: [2.48mx,hy+4]
+          shift: [44.64,hy+4]
         - ref: matrix_inner_top
-          shift: [2.48mx,-3.8my]
-        - ref: matrix_middle_bottom
-          shift: [hx,-4.665hy]
+          shift: [44.64,hy+4-55.6]
+        - ref: matrix_inner_top
+          shift: [44.64-3,hy+4-55.6]
+        - ref: matrix_inner_top
+          shift: [44.64-3,hy+4-55.6-15.8]
+        - ref: matrix_inner_top
+          shift: [44.64,hy+4-55.6-15.8]
+        - ref: matrix_inner_top
+          shift: [44.64,-69.16]
         - ref: matrix_outer_home
-          shift: [-hx-4,-2.2hy]
+          shift: [-hx-4,-19.29]
       expand: 0
       joints: beveled
-  _board_looser:
-    - what: polygon
-      operation: stack
-      points:
-        - ref: matrix_outer_top
-          shift: [-hx,hy+20]
-        - ref: matrix_inner_top
-          shift: [hx,hy+42]
-        - ref: fan_far_thumb
-          shift: [hx,hy + 4]
-        - ref: fan_near_thumb
-          shift: [-hx,0]
-        - ref: matrix_outer_home
-          shift: [-hx,-hy-13]
-      expand: 4
-      joints: beveled
-  _board_tight:
+  _plate_tight:
+    - what: rectangle
+      where: true
+      bound: false
+      size: [mx+0,my+0]
+      expand: 2
+      joints: pointy
+  _pcb_tight:
     - what: rectangle
       where: true
       bound: false
       size: [mx+0,my+0]
       expand: 4
       joints: pointy
-  debug:
-    - name: _board_loose
+  _debug:
+    - name: _plate_loose
     - operation: stack
       name: _keycaps
-  _board:
-    - name: _board_loose
+  debug2:
+    - name: _debug
+    - operation: stack
+      name: _pcb_loose
+  _plate:
+    - name: _plate_loose
     - operation: add
-      name: _board_tight
+      name: _plate_tight
+  _pcb:
+    - name: _pcb_loose
+    - operation: add
+      name: _pcb_tight
   pcb:
     - what: outline
-      name: _board
+      name: _pcb
+      fillet: 1
+  plate:
+    - what: outline
+      name: _plate
       fillet: 1
   _outer:
     - what: outline
@@ -166,17 +209,21 @@ outlines:
     - name: _outer
     - operation: subtract
       name: pcb
-  stack:
+  stack_pcb:
     - name: pcb
+    - operation: stack
+      name: _keycaps
+  stack_plate:
+    - name: plate
     - operation: stack
       name: _keycaps
   keycaps:
     - name: _keycaps
   switchplate:
-    - name: pcb
+    - name: plate
     - operation: subtract
       name: _keys
   switchplate_recess:
-    - name: pcb
+    - name: plate
     - operation: subtract
       name: _keys_recessed

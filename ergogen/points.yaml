@@ -1,7 +1,7 @@
 matrix_outer_home:
-  x: -1.902418
-  'y': 18.1002985
-  r: 6
+  x: -3.1603968
+  'y': 17.9235011
+  r: 10
   meta:
     stagger: 0
     spread: 18
@@ -101,9 +101,9 @@ matrix_outer_home:
     col: *ref_0
     row: home
 matrix_outer_top:
-  x: -3.804836
-  'y': 36.200597
-  r: 6
+  x: -6.3207936
+  'y': 35.8470022
+  r: 10
   meta:
     stagger: 0
     spread: 18
@@ -133,9 +133,9 @@ matrix_outer_top:
     col: *ref_0
     row: top
 matrix_pinky_bottom:
-  x: 17.5966243
-  'y': 10.9996051
-  r: 4
+  x: 16.7864661
+  'y': 12.2002891
+  r: 8
   meta:
     stagger: 9.1
     spread: 18.65
@@ -165,9 +165,9 @@ matrix_pinky_bottom:
     col: *ref_2
     row: bottom
 matrix_pinky_home:
-  x: 16.327056499999998
-  'y': 29.1552708
-  r: 4
+  x: 14.2535157
+  'y': 30.2231679
+  r: 8
   meta:
     stagger: 9.1
     spread: 18.65
@@ -197,9 +197,9 @@ matrix_pinky_home:
     col: *ref_2
     row: home
 matrix_pinky_top:
-  x: 15.057488699999997
-  'y': 47.3109365
-  r: 4
+  x: 11.7205653
+  'y': 48.2460468
+  r: 8
   meta:
     stagger: 9.1
     spread: 18.65
@@ -229,9 +229,9 @@ matrix_pinky_top:
     col: *ref_2
     row: top
 matrix_ring_bottom:
-  x: 35.321574
-  'y': 27.7468304
-  r: 2
+  x: 33.3000114
+  'y': 30.143149
+  r: 6
   meta:
     stagger: 15.469999999999999
     spread: 18.85
@@ -261,9 +261,9 @@ matrix_ring_bottom:
     col: *ref_3
     row: bottom
 matrix_ring_home:
-  x: 34.6864032
-  'y': 45.9357435
-  r: 2
+  x: 31.3975934
+  'y': 48.2434475
+  r: 6
   meta:
     stagger: 15.469999999999999
     spread: 18.85
@@ -293,9 +293,9 @@ matrix_ring_home:
     col: *ref_3
     row: home
 matrix_ring_top:
-  x: 34.0512324
-  'y': 64.12465660000001
-  r: 2
+  x: 29.4951754
+  'y': 66.3437461
+  r: 6
   meta:
     stagger: 15.469999999999999
     spread: 18.85
@@ -325,9 +325,9 @@ matrix_ring_top:
     col: *ref_3
     row: top
 matrix_middle_bottom:
-  x: 53.7789885
-  'y': 39.3180339
-  r: 0
+  x: 50.9052982
+  'y': 42.9736897
+  r: 4
   meta:
     stagger: 10.92
     spread: 18.85
@@ -357,9 +357,9 @@ matrix_middle_bottom:
     col: *ref_4
     row: bottom
 matrix_middle_home:
-  x: 53.7789885
-  'y': 57.518033900000006
-  r: 0
+  x: 49.6357304
+  'y': 61.1293555
+  r: 4
   meta:
     stagger: 10.92
     spread: 18.85
@@ -389,9 +389,9 @@ matrix_middle_home:
     col: *ref_4
     row: home
 matrix_middle_top:
-  x: 53.7789885
-  'y': 75.71803390000001
-  r: 0
+  x: 48.3661625
+  'y': 79.2850212
+  r: 4
   meta:
     stagger: 10.92
     spread: 18.85
@@ -421,9 +421,9 @@ matrix_middle_top:
     col: *ref_4
     row: top
 matrix_index_bottom:
-  x: 72.4289886
-  'y': 30.2180338
-  r: -2
+  x: 70.1446517
+  'y': 35.196815
+  r: 2
   meta:
     stagger: -9.1
     spread: 18.65
@@ -453,9 +453,9 @@ matrix_index_bottom:
     col: *ref_5
     row: bottom
 matrix_index_home:
-  x: 73.0641594
-  'y': 48.4069469
-  r: -2
+  x: 69.5094809
+  'y': 53.3857281
+  r: 2
   meta:
     stagger: -9.1
     spread: 18.65
@@ -485,9 +485,9 @@ matrix_index_home:
     col: *ref_5
     row: home
 matrix_index_top:
-  x: 73.69933019999999
-  'y': 66.59586
-  r: -2
+  x: 68.87431
+  'y': 71.5746412
+  r: 2
   meta:
     stagger: -9.1
     spread: 18.65
@@ -517,9 +517,9 @@ matrix_index_top:
     col: *ref_5
     row: top
 matrix_inner_bottom:
-  x: 90.8453177
-  'y': 23.2010386
-  r: -4
+  x: 89.0056004
+  'y': 29.4815711
+  r: 0
   meta:
     stagger: -6.369999999999999
     spread: 18.65
@@ -549,9 +549,9 @@ matrix_inner_bottom:
     col: *ref_6
     row: bottom
 matrix_inner_home:
-  x: 92.1148855
-  'y': 41.356704300000004
-  r: -4
+  x: 89.0056004
+  'y': 47.681571
+  r: 0
   meta:
     stagger: -6.369999999999999
     spread: 18.65
@@ -581,9 +581,9 @@ matrix_inner_home:
     col: *ref_6
     row: home
 matrix_inner_top:
-  x: 93.3844533
-  'y': 59.512370000000004
-  r: -4
+  x: 89.0056004
+  'y': 65.881571
+  r: 0
   meta:
     stagger: -6.369999999999999
     spread: 18.65
@@ -613,9 +613,9 @@ matrix_inner_top:
     col: *ref_6
     row: top
 fan_near_thumb:
-  x: 71.4127153
-  'y': 1.1157728999999996
-  r: 6
+  x: 71.1609251
+  'y': 6.0945541
+  r: 10
   meta:
     stagger: 0
     spread: 19
@@ -682,9 +682,9 @@ fan_near_thumb:
     col: *ref_7
     row: thumb
 fan_home_thumb:
-  x: 94.5770981
-  'y': -1.1313632
-  r: -19
+  x: 94.4256329
+  'y': 5.4687576
+  r: -15
   meta:
     stagger: 0
     spread: 19.8
@@ -714,9 +714,9 @@ fan_home_thumb:
     col: *ref_9
     row: thumb
 fan_far_thumb:
-  x: 114.62147800000001
-  'y': -12.957651600000002
-  r: -44
+  x: 115.2461459
+  'y': -4.9304973
+  r: -40
   meta:
     stagger: 0
     spread: 19.8
