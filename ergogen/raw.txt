@@ -123,20 +123,26 @@ outlines:
           shift: [hx+6,hy+2]
         - ref: matrix_inner_top
           shift: [41.64,-69.16]
-        - ref: fan_near_thumb
-          orient: 0
-          shift: [-hx-2.0,-hy+1.55]
-        - ref: matrix_ring_bottom
-          orient: 0
-          shift: [-hx+32.1,-hy-4]
-        - ref: matrix_ring_bottom
-          orient: 0
-          shift: [-hx+4,-hy-4]
-        - ref: matrix_ring_bottom
-          orient: 1.5
-          shift: [-hx+4,-hy-24]
         - ref: matrix_outer_home
           shift: [-hx-2,-19.62]
+      expand: 0
+      joints: beveled
+  _battery_cutout:
+    - what: polygon
+      operation: stack
+      points:
+        - ref: fan_near_thumb
+          orient: 0
+          shift: [-hx-2,-hy+1.45-0.5]
+        - ref: matrix_ring_bottom
+          orient: 1
+          shift: [-hx+32.2,-hy-1.5]
+        - ref: matrix_ring_bottom
+          orient: 1
+          shift: [-hx+1,-hy-0.5]
+        - ref: matrix_ring_bottom
+          orient: 1
+          shift: [-hx+1,-hy-23.6-0.5]
       expand: 0
       joints: beveled
   _pcb_loose:
@@ -189,6 +195,10 @@ outlines:
     - name: _plate_loose
     - operation: add
       name: _plate_tight
+  _plate_wo_battery:
+    - name: _plate
+    - operation: subtract
+      name: _battery_cutout
   _pcb:
     - name: _pcb_loose
     - operation: add
@@ -199,7 +209,7 @@ outlines:
       fillet: 1
   plate:
     - what: outline
-      name: _plate
+      name: _plate_wo_battery
       fillet: 1
   _outer:
     - what: outline
