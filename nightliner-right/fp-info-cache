@@ -1,4 +1,4 @@
-24006142790861586
+24021453161149299
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -99287,3 +99287,66 @@ e73-2g4m08s1c-tht
 0
 43
 43
+nightliner
+HOLYIOT-18010-UndersidePins-SMD
+HOLYIOT-18010 Official Footprint outside SMD pads with underside SMD pads
+holyiot nRF52840
+0
+55
+55
+nightliner
+ISP_Programming_Pads
+Non plated holes 2.4mm, no annular, 5 SMD testpads
+programming header ISP
+0
+5
+5
+nightliner
+Kailh_Choc_CPG135001D02_Hotswap
+Kailh Choc Switch CPG135001D02 with hotswap socket
+choc keyboard kailh
+0
+2
+2
+nightliner
+MagConn_6pin_left
+Magnetic pogo pin connector, 6 pins, left angled
+connector magnetic pgo
+0
+6
+6
+nightliner
+MagConn_6pin_right
+Magnetic pogo pin connector, 6 pins, right angled
+connector magnetic pgo
+0
+6
+6
+nightliner
+SW_Push_1P1T_NO_CK_KSC4xxJ
+CK components KSC4 tactile switch https://www.ckswitches.com/media/1970/ksc4.pdf
+tactile switch ksc4
+0
+4
+2
+nightliner
+SW_ROCPU_SK-12D07-5_SPDT_Angled
+ROCPU SK-12D07-5, Angled THT Slide Switch
+switch SPDT
+0
+5
+3
+nightliner
+StandOff_6mm_M3
+StandOff 6mm, no annular, M3
+mounting hole 6mm no annular m3
+0
+0
+0
+nightliner
+VQFN-16-1EP_3x3mm_P0.5mm_EP1.6x1.6mm_ThermalVias
+VQFN, 16 Pin (http://www.ti.com/lit/ds/symlink/cdclvp1102.pdf#page=28), generated with kicad-footprint-generator ipc_noLead_generator.py
+VQFN NoLead
+0
+26
+17
